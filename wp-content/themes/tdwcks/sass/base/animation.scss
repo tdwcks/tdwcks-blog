@@ -1,0 +1,16 @@
+// ==========================================================================
+//
+// Animation
+//
+//
+
+@include keyframes(fadeIn) {
+  from {
+    @include transform(translateY(50px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0px));
+    opacity: 1;
+  }
+}

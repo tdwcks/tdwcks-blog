@@ -1,0 +1,64 @@
+// ==========================================================================
+//
+// Articles
+//
+//
+
+.article-container {
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.article-posts {
+	float: left;
+	margin-top: 130px;
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	@include transition(all, 0.4s, ease-in-out);
+
+	h5 {font-weight: 300;}
+
+	a {
+		border-bottom: 2px solid #000;
+		color: #000;
+		text-decoration: none;
+	}
+
+	.info-active & {
+		@include transform(translateX(-100%));
+	}
+
+	@include mq("medium", max-width) {
+    	margin-top: 100px;
+  	}
+}
+
+.article-info {
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 130px;	
+	@include transform(translateX(100%));
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	@include transition(all, 0.4s, ease-in-out);
+
+	.info-active & {
+		@include transform(translateX(0));
+	}
+
+	h5 {font-weight: 300;}
+
+	a {
+		border-bottom: 2px solid #000;
+		color: #000;
+		text-decoration: none;
+	}
+
+	@include mq("medium", max-width) {
+    	margin-top: 100px;
+  	}
+}

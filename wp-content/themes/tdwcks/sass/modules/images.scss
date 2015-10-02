@@ -1,0 +1,45 @@
+// ==========================================================================
+//
+// Images
+//
+//
+
+.image-post-hero {
+	width: 100%;
+	@include maintain-ratio(1.619 1);
+	background: $colourGrey;
+	overflow: hidden;
+}
+
+.image-post-clip {
+	width: 100%;
+	@include maintain-ratio(16 9);
+	background: $colourGrey;
+	overflow: hidden;
+}
+
+.image-collaborator-profile {
+	width: 35px;
+	height: 35px;
+	background: $colourGrey;
+	@include border-radius(100%);
+	margin-right: 10px;
+	float: left;
+	overflow: hidden;
+}
+
+.image-social-profile {
+	width: 35px;
+	height: 35px;
+	background: $colourGrey;
+	@include border-radius(100%);
+	float: left;
+	overflow: hidden;
+}
+
+.image-instagram-holder {
+	width: 100%;
+	@include maintain-ratio(1 1);
+	background: $colourGrey;
+	overflow: hidden;
+}

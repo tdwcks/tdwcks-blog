@@ -1,0 +1,185 @@
+// ==========================================================================
+//
+// Layout
+//
+//
+
+.layout-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 92%;
+}
+
+.layout-container-inner {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.layout-row {
+  clear: both;
+  width: 100%;
+}
+
+.layout-span-twelve {
+  float: left;
+  width: 100%;
+}
+
+.layout-span-eight {
+  margin-right: 24px;
+  float: left;
+  @include calc(width, "66.64% - 12px");
+
+  @include mq("small", "max-width") {
+      width: 100%;
+  }
+}
+
+.layout-shift-six {
+  @include calc(margin-left, "50% + 12px");
+}
+
+.layout-span-six {
+  margin-right: 24px;
+  float: left;
+  @include calc(width, "50% - 12px");
+
+  @include mq("extra-small", "max-width") {
+      width: 100%;
+      margin-right: 0;
+  }
+}
+
+.layout-shift-four {
+  @include calc(margin-left, "33.3% + 9px");
+
+  @include mq("small", "max-width") {
+      width: 100%;
+  }
+}
+
+.layout-span-four {
+  margin-right: 24px;
+  float: left;
+  @include calc(width, "33.3% - 16px");
+
+  @include mq("small", "max-width") {
+      width: 100%;
+  }
+
+  @include mq("extra-small", "max-width") {
+      width: 100%;
+      margin-right: 0;
+  }
+}
+
+.layout-shift-three {
+  @include calc(margin-left, "25% + 6px");
+
+  @include mq("medium", "max-width") {
+      margin-left: 0;
+  }
+}
+
+.layout-span-three {
+  margin-right: 24px;
+  float: left;
+  @include calc(width, "25% - 18px");
+
+  @include mq("small", "max-width") {
+      @include calc(width, "50% - 12px");
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+  }
+
+  @include mq("extra-small", "max-width") {
+      width: 100%;
+      margin-right: 0;
+  }
+}
+
+.layout-shift-two {
+  @include calc(margin-left, "16.6667% + 4px");
+
+  @include mq("medium", "max-width") {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
+.layout-span-two {
+  margin-right: 24px;
+  float: left;
+  @include calc(width, "16.6667% - 20px");
+
+  @include mq("small", "max-width") {
+      @include calc(width, "33.3% - 16px");
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+  }
+
+  @include mq("small", "max-width") {
+      width: 100%;
+
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+  }
+}
+
+.layout-shift-one {
+  @include calc(margin-left, "8.33% + 2px");
+
+  @include mq("small", "max-width") {
+      margin-left: 0;
+  }
+}
+
+.layout-span-one {
+  @include calc(width, "8.33%");
+
+  @include mq("small", "max-width") {
+      margin-left: 0;
+  }
+}
+
+.layout-split-half {
+  @include calc(width, "50% - 12px");
+  float: left;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mq("medium", "max-width") {
+      width: 100%;
+  }
+}
+
+.layout-title-center {
+  display: block;
+  margin: 0 auto;
+  @include calc(width, "33.3% - 16px");
+
+  @include mq("small", "max-width") {
+      width: 100%;
+  }
+}
+
+.layout-margin-one {
+  margin-top: 15px;
+}
+
+.layout-column-right {
+  margin-right: 0;
+}

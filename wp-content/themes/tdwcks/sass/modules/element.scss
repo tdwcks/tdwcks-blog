@@ -1,0 +1,205 @@
+// ==========================================================================
+//
+// Element
+//
+//
+
+a.element-post {
+	width: 100%;
+	background: $colourFour;
+	height: auto;
+	overflow: auto;
+	padding: 50px 0 50px 0;
+	cursor: pointer;
+	display: block;
+	opacity: 0;
+	border-bottom: 0;
+
+	h5, h1, p, {
+		color: #000;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	h5 {
+		margin: 0;
+		font-weight: 300;
+	}
+
+	h5.type-right {
+		display: inline-block;
+		float: right;
+	}
+
+	&:nth-child(even) {
+		background: darken($colourFour, 3%);
+
+		h5, h1, p, {
+			color: #000;
+		}
+	}
+
+	&:hover {
+		background: darken($colourFour, 5%);
+	}
+
+	@for $i from 1 through 5 {
+      // Apply animation using :nth-child pseudoclass
+      &:nth-child(#{$i}) {
+        // Include the animation mixin, together with 
+        // a delay parameter.
+        @include animation--fadedown($i/10);
+      }
+    }
+
+    @include mq("medium", max-width) {
+    	padding: 40px 0;
+    	
+    	h5 {
+    		margin-bottom: 1em;
+    	}
+  	}
+
+  	@include mq("small", max-width) {
+    	padding: 35px 0 25px 0;
+
+    	.layout-span-six {
+    		width: 70%;
+    		margin-right: 0;
+    	}
+
+    	.layout-span-three {
+    		width: 70%;
+    		margin-right: 0;
+    	}
+
+    	.layout-column-right {
+    		width: 30%;
+    	}
+    	
+    	h5 {
+    		margin-bottom: 1em;
+    	}
+
+    	p {
+    		display: none;
+    	}
+  	}
+
+  	@include mq("extra-small", max-width) {
+    	padding: 35px 0 25px 0;
+
+    	.layout-span-six {
+    		width: 100%;
+    		margin-right: 0;
+    	}
+
+    	.layout-span-three {
+    		width: 100%;
+    		margin-right: 0;
+    	}
+
+    	.layout-column-right {
+    		width: 100%;
+    	}
+    	
+    	h5 {
+    		margin-bottom: 1em;
+    	}
+
+    	h5.type-right {
+    		margin-top: 0.5em;
+    		float: left;
+    	}
+
+    	p {
+    		display: none;
+    	}
+  	}
+}
+
+.element-post-page {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	padding: 50px 0 50px 0;
+	cursor: pointer;
+	display: block;
+	opacity: 0;
+
+	img {
+		height: auto;
+	}
+
+	h5, h1, p, {
+		color: #000;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		margin: 1.215em 0;
+	}
+
+	h5 {
+		margin: 0;
+		font-weight: 300;
+	}
+
+	h5.type-right {
+		display: inline-block;
+		float: right;
+	}
+
+	h5 a {
+		border-bottom: 0;
+	}
+
+	@for $i from 1 through 5 {
+      // Apply animation using :nth-child pseudoclass
+      &:nth-child(#{$i}) {
+        // Include the animation mixin, together with 
+        // a delay parameter.
+        @include animation--fadedown($i/10);
+      }
+    }
+
+    @include mq("medium", max-width) {
+    	
+    	.layout-span-three {
+    		@include calc(width, "66.64% - 12px");
+    		float: none;
+    		display: block;
+    		margin: 0 auto;
+    	}
+
+    	.layout-span-six {
+    		@include calc(width, "66.64% - 12px");
+    		float: none;
+    		display: block;
+    		margin: 0 auto;
+    	}
+
+    	h5 {
+    		margin-bottom: 1em;
+    	}
+
+  	}
+
+    @include mq("small", max-width) {
+    	
+    	h5 {
+    		margin-bottom: 1em;
+    	}
+
+
+    	.layout-span-three, .layout-span-six {
+    		width: 100%;
+    	}
+  	}
+}
+
